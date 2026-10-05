@@ -10,57 +10,57 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Code
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
 
-      - name: Print message
-        run: echo 'job1..'
+      - name: Run program1
+        run: python program1.py
 
   job2:
     runs-on: ubuntu-latest
     needs: job1
     steps:
       - name: Checkout Code
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
 
-      - name: Print message
-        run: echo 'job2'
+      - name: Run program2
+        run: python program2.py
 
   job3:
     runs-on: ubuntu-latest
     needs: job1
     steps:
       - name: Checkout Code
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
 
-      - name: Print message
-        run: echo 'job3'
+      - name: Run program3
+        run: python program3.py
 
   job4:
     runs-on: ubuntu-latest
     needs: job2
     steps:
       - name: Checkout Code
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
 
-      - name: Print message
-        run: echo 'job4'
+      - name: Run program4
+        run: python program4.py
 
   job5:
     runs-on: ubuntu-latest
     needs: job3
     steps:
       - name: Checkout Code
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
 
-      - name: Print message
-        run: echo 'job5'
+      - name: Run program1 again
+        run: python program1.py
 
   job6:
     runs-on: ubuntu-latest
     needs: [job4, job5]
     steps:
       - name: Checkout Code
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
 
-      - name: Print message
-        run: echo 'job6'
+      - name: Run program1 final
+        run: python program1.py

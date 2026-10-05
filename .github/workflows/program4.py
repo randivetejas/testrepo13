@@ -1,0 +1,1 @@
+print("shri ganeshay namah")
