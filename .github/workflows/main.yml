@@ -23,7 +23,7 @@ jobs:
         uses: actions/checkout@v7
 
       - name: Run program2
-        run: python .github/workflows/program2.py
+        run: echo "${{ inputs.programmer_name }}" | python .github/workflows/program2.py
 
   job3:
     runs-on: ubuntu-latest
